@@ -1,0 +1,61 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - chatbot-network
+    depends_on:
+      - backend
+    environment:
+      - BACKEND_URL=backend:5001
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    networks:
+      - chatbot-network
+
+  rasa:
+    build:
+      context: ./rasa
+      dockerfile: Dockerfile
+    volumes:
+      - ./rasa:/app
+    ports:
+      - "5005:5005"
+    networks:
+      - chatbot-network
+    command:
+      - run
+      - --debug
+      - --enable-api
+      - --cors
+      - "*"
+
+  action_server:
+    build:
+      context: ./rasa
+    volumes:
+      - ./rasa/actions:/chatbot
+      - ./rasa/db:/chatbot/db
+    ports:
+      - "5055:5055"
+    networks:
+      - chatbot-network
+    command:
+      - run
+      - --debug
+      - actions
+      - --cors
+      - "*"
+
+networks:
+  chatbot-network:
+    driver: bridge

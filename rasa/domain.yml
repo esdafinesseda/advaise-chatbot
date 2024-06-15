@@ -1,0 +1,44 @@
+version: "3.1"
+entities:
+  - role
+  - comparison
+  - experience
+  - contracts
+  - neg_contract
+
+slots:
+  contracts:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: contracts
+  comparison:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: comparison
+  experience:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: experience
+  neg_contract:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: neg_contract
+
+intents:
+  - find_employee
+  - find_any
+
+actions:
+  - action_find_employee
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

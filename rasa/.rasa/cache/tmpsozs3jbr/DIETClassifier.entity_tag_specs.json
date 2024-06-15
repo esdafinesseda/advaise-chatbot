@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-descriptor",
+      "2": "I-descriptor",
+      "3": "L-descriptor",
+      "4": "U-descriptor",
+      "5": "B-experience",
+      "6": "I-experience",
+      "7": "L-experience",
+      "8": "U-experience",
+      "9": "B-experience_comparison",
+      "10": "I-experience_comparison",
+      "11": "L-experience_comparison",
+      "12": "U-experience_comparison",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-descriptor": 1,
+      "I-descriptor": 2,
+      "L-descriptor": 3,
+      "U-descriptor": 4,
+      "B-experience": 5,
+      "I-experience": 6,
+      "L-experience": 7,
+      "U-experience": 8,
+      "B-experience_comparison": 9,
+      "I-experience_comparison": 10,
+      "L-experience_comparison": 11,
+      "U-experience_comparison": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]
