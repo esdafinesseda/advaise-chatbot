@@ -1,8 +1,0 @@
-# Ignore temps
-*.swp
-*.tmp
-*.log
-
-# Ignore build directories
-frontend/node_modules/
-rasa/.rasa
