@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-comparison",
+      "2": "I-comparison",
+      "3": "L-comparison",
+      "4": "U-comparison",
+      "5": "B-contracts",
+      "6": "I-contracts",
+      "7": "L-contracts",
+      "8": "U-contracts",
+      "9": "B-experience",
+      "10": "I-experience",
+      "11": "L-experience",
+      "12": "U-experience",
+      "13": "B-role",
+      "14": "I-role",
+      "15": "L-role",
+      "16": "U-role",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-comparison": 1,
+      "I-comparison": 2,
+      "L-comparison": 3,
+      "U-comparison": 4,
+      "B-contracts": 5,
+      "I-contracts": 6,
+      "L-contracts": 7,
+      "U-contracts": 8,
+      "B-experience": 9,
+      "I-experience": 10,
+      "L-experience": 11,
+      "U-experience": 12,
+      "B-role": 13,
+      "I-role": 14,
+      "L-role": 15,
+      "U-role": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

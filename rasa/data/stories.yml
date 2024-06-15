@@ -1,0 +1,7 @@
+version: "3.1"
+
+stories:
+  - story: find staff
+    steps:
+      - intent: find_employee
+      - action: action_find_employee

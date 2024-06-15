@@ -1,0 +1,33 @@
+version: "3.1"
+nlu:
+  - intent: find_employee
+    examples: |
+      - they are a [project manager](role)
+      - they are a [diversity and inclusiveness researcher](role)
+      - they have [more than](comparison) [4](experience) years of experience
+      - they have [less than](comparison) [20](experience) years of experience
+      - they are a [contractor](contracts)
+      - they are [not](neg_contract) a [contractor](contracts)
+      - they are a [project manager](role), they have [more than](comparison) [5](experience) years of experience
+      - they are a [project manager](role), they have [less than](comparison) [5](experience) years of experience
+      - they are a [diversity and inclusiveness researcher](role), they have [more than](comparison) [10](experience) years of experience
+      - they are a [diversity and inclusiveness researcher](role), they have [less than](comparison) [10](experience) years of experience
+      - they are a [project manager](role), they are a [contractor](contracts)
+      - they are a [project manager](role), they are [not](neg_contract) a [contractor](contracts)
+      - they are a [diversity and inclusiveness researcher](role), they are a [contractor](contracts)
+      - they are a [diversity and inclusiveness researcher](role), they are [not](neg_contract) a [contractor](contracts)
+      - they are a [project manager](role), they have [more than](comparison) [20](experience) years of experience, they are a [contractor](contracts)
+      - they are a [project manager](role), they have [more than](comparison) [20](experience) years of experience, they are [not](neg_contract) a [contractor](contracts)
+      - they are a [project manager](role), they have [less than](comparison) [20](experience) years of experience, they are a [contractor](contracts)
+      - they are a [project manager](role), they have [less than](comparison) [20](experience) years of experience, they are [not](neg_contract) a [contractor](contracts)
+      - they are a [diversity and inclusiveness researcher](role), they have [more than](comparison) [1](experience) years of experience, they are a [contractor](contracts)
+      - they are a [diversity and inclusiveness researcher](role), they have [more than](comparison) [1](experience) years of experience, they are [not](neg_contract) a [contractor](contracts)
+      - they are a [diversity and inclusiveness researcher](role), they have [less than](comparison) [15](experience) years of experience, they are [not](neg_contract) a [contractor](contracts)
+      - they are a [diversity and inclusiveness researcher](role), they have [less than](comparison) [15](experience) years of experience, they are [not](neg_contract) a [contractor](contracts)
+
+  - intent: find_any
+    examples: |
+      - find people who fulfil the following requirements: any person
+      - find all staff
+      - get all staff
+      - return all staff
